@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000;
+    background-size: cover;
+    }
+.sideLinks ul{ 
+    display: inline-block;
+    position: fixed;   
+    height: 100%;
+    width: 100vw;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+        }
+.sideLinks li{
+    float: left;
+                }
+.sideLinks li a{
+    display: block;
+    color: white;
+    margin-top: 1vh;
+    width: 19vw;
+    height: 3vh;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+    overflow-x: hidden;
+    background: rgb(0, 0, 0, .2);
+        }
+.sideLinks a:hover{
+    height: 3vh;
+    opacity: .8;
+	transition: 1s;
+    z-index: 2;
+    color: red;
+    background-color: rgb(0, 0, 0, .6);
+    }
+.followMe{
+    width: 25vw;
+    font-size: small;
+    margin: auto;
+    margin-top: 10px;
+    font-size: medium;
+    color: black;
+    text-align: center;
+}
+.icons{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    margin: auto;
+    width: 25vw;
+    height: 2vh;
+    gap: 2vh 3vw;
+    text-align: center;
+  }
+.icons a{
+    display: grid;
+    top: 0;
+    text-align: center;
+}
+.icons img{
+    display: grid;
+    width: 2vw;
+    height: 2vh;
+    max-height: 30px;
+    max-width: 30px;
+    text-align: center;
+}
+.icons a:hover{
+    background-color: #000;
+    display: block;
+	opacity: .5;
+	transition: 1s;
+}
+

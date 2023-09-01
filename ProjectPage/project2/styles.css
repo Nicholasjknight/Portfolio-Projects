@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    margin: 0;
+    top: 0;
+          }
+.sideLinks ul{ 
+    display: inline-block;
+    position: fixed;   
+    height: 100%;
+    width: 100vw;
+    list-style-type: none;
+    z-index: 1;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+        }
+.sideLinks li{
+    float: left;
+                }
+.sideLinks li a{
+    display: block;
+    color: white;
+    margin-top: 1vh;
+    width: 19vw;
+    height: 3vh;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+    overflow-x: hidden;
+    background: rgb(0, 0, 0, .2);
+        }
+.sideLinks a:hover{
+    height: 3vh;
+    opacity: .8;
+	transition: 1s;
+    z-index: 2;
+    color: red;
+    background-color: rgb(0, 0, 0, .6);
+    }
+html, body {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.content {
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    padding: 40px 0 40px 0;
+
+}
+
+.hero-back {
+    width: 90vw;
+    height: 100vh;
+    background: url(./images/pexels-phil-kallahar-983200.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    left: 5vw;
+    top: 0;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    margin-top: 30vh;
+    }
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.hero-back img {
+    width: 90vw;
+    height: 110vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.icons{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    margin: auto;
+    width: 25vw;
+    height: 2vh;
+    gap: 2vh 3vw;
+    text-align: center;
+  }
+.icons a{
+    display: grid;
+    top: 0;
+    text-align: center;
+}
+.icons img{
+    display: grid;
+    width: 2vw;
+    height: 2vh;
+    max-height: 25px;
+    max-width: 25px;
+    text-align: center;
+}
+.icons a:hover{
+    background-color: #000;
+    display: block;
+	opacity: .5;
+	transition: 1s;
+}
+.boxes{
+    background: rgb(0, 0, 0, .7);
+    margin-top: 10vh;
+    width: 90vw;
+    line-height: 0px;
+    margin-left: 5vw;
+    text-align: center;
+    vertical-align: top;
+    display: table;
+    border-bottom: rgba(190, 12, 12, 0.6) 1mm groove;
+    border-top: rgb(190, 12, 12, .6) 1mm groove;
+    }
+.boxes span{
+    display: table-cell;
+    vertical-align: top;
+    width: 30vw;
+        }
+.boxes span img{
+    display: table-cell;
+    height: 12vh;
+    width: 11vw;
+    margin-left: 10vw;
+    min-width: auto;
+        }
+.boxes2{
+    width: 100vw;
+    margin-top: 10px;
+    max-height: fit-content;
+    display: table;
+    background-color: rgb(0, 0, 0, .7);
+               }
+.bxtxt{ 
+    color: whitesmoke;
+    display: table-cell;
+    width: 30vw;
+    vertical-align: top;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+        }
+.bxtxt li{
+    width: 20vw;
+    margin-left: 10vw;
+    margin-bottom: 20px;
+    }
+.aboutism{
+    font-size: large;
+    color: rgb(253, 249, 249);
+    margin-left: 10vw;
+    text-align: center;
+    width: 80vw;
+        }
+.aboutTitle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    margin-top: 10vh;
+    color: rgb(248, 247, 247);
+    text-align: center;
+        }
+.emailText{
+    color: #fff;
+    text-align: center;
+}
+.projects{
+    text-align: center;
+    
+}
+.figures {
+	display: table-cell;
+	height: 30vh;
+    border-radius: 10px;
+         }
+.figures a{
+    height: 20vh;
+    width: 20vw;
+}
+.figures a img{
+    height: 20vh;
+    width: 20vw;
+}

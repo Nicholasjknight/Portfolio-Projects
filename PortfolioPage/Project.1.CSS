@@ -11,7 +11,7 @@ nav{
 .sideLinks ul{ 
     display: inline-block;
     position: fixed;   
-    height: 8vh;
+    height: 10vh;
     width: 100vw;
     list-style-type: none;
     z-index: 1;
@@ -28,7 +28,8 @@ nav{
     color: white;
     margin-top: 1vh;
     width: 19vw;
-    height: auto;
+    height: 5vh;
+    overflow-y: hidden;
     font-size: larger;
     text-align: center;
     text-decoration: none;
@@ -53,6 +54,8 @@ html, body {
     width: 100vw;
     height: auto;
     margin: auto;
+    padding: 40px 0 40px 0;
+
 }
 .hero-back {
     width: 90vw;
@@ -93,7 +96,7 @@ p {
     grid-template-columns: auto auto auto auto auto auto;
     margin: auto;
     width: 25vw;
-    height: auto;
+    height: 4vh;
     gap: 2vh 3vw;
     text-align: center;
   }
@@ -104,8 +107,10 @@ p {
 }
 .icons img{
     display: grid;
-    width: 2vw;
-    height: auto;
+    width: 3vw;
+    height: 3vh;
+    max-height: 25px;
+    max-width: 25px;
     text-align: center;
 }
 .icons a:hover{
@@ -161,7 +166,7 @@ p {
     margin-bottom: 20px;
     }
 .aboutism{
-    font-size: large;
+    font-size: x-large;
     height: 100%;
     color: rgb(253, 249, 249);
     margin-left: 10vw;
@@ -340,7 +345,7 @@ p {
 .Pythonscripts {
     margin left: 5vw;
     width: 90vw;
-    height: auto;
+    height: 20vh;
     background-color: black;
     text-align: center;
     display: grid;
@@ -361,7 +366,7 @@ p {
     
 }
 .Pythonscripts img{
-    height: 20vh;
+    height: 15vh;
     width: 15vw;
     object-fit: cover;
 }

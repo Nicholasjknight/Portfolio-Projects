@@ -28,7 +28,6 @@ nav{
     color: white;
     margin-top: 1vh;
     width: 19vw;
-    height: 5vh;
     overflow-y: hidden;
     font-size: larger;
     text-align: center;
@@ -154,7 +153,7 @@ p {
     color: whitesmoke;
     display: table-cell;
     width: 30vw;
-    font-size: 20px;
+    font-size: large;
     vertical-align: top;
     list-style: none;
     text-decoration: none;
@@ -181,6 +180,7 @@ p {
     text-align: center;
         }
 .emailText{
+    margin-top: 10vh;
     color: #fff;
     text-align: center;
     bottom: 0;
@@ -275,17 +275,17 @@ p {
 .Tableau div{
     margin-left: 5vw;
     margin-top: 5vh;
-    height: 20vh;
+    height: auto;
     color: white;      
 }
 .Tableau a{
     margin-top: 5vh;
-    height: 10vh;
+    height: auto;
     color: white;
     text-decoration: none;
 }
 .Tableau img{
-    height: 20vh;
+    height: auto;
     width: 15vw;
     object-fit: cover;
 }

@@ -105,7 +105,7 @@ p {
 .icons img{
     display: grid;
     width: 2vw;
-    height: 2vh;
+    height: auto;
     text-align: center;
 }
 .icons a:hover{
@@ -161,7 +161,7 @@ p {
     margin-bottom: 20px;
     }
 .aboutism{
-    font-size: x-large;
+    font-size: large;
     height: 100%;
     color: rgb(253, 249, 249);
     margin-left: 10vw;

@@ -28,7 +28,7 @@ nav{
     color: white;
     margin-top: 1vh;
     width: 19vw;
-    height: 3vh;
+    height: auto;
     font-size: larger;
     text-align: center;
     text-decoration: none;
@@ -53,13 +53,7 @@ html, body {
     width: 100vw;
     height: auto;
     margin: auto;
-    padding: 40px 0 40px 0;
-
 }
-.dropdown {
-    display: inline-block;
-    position: relative;
-  }
 .hero-back {
     width: 90vw;
     height: 105vh;
@@ -99,7 +93,7 @@ p {
     grid-template-columns: auto auto auto auto auto auto;
     margin: auto;
     width: 25vw;
-    height: 2vh;
+    height: auto;
     gap: 2vh 3vw;
     text-align: center;
   }
@@ -112,8 +106,6 @@ p {
     display: grid;
     width: 2vw;
     height: 2vh;
-    max-height: 25px;
-    max-width: 25px;
     text-align: center;
 }
 .icons a:hover{
@@ -169,8 +161,8 @@ p {
     margin-bottom: 20px;
     }
 .aboutism{
-    font-size: 20px;
-    height: 5vh;
+    font-size: x-large;
+    height: 100%;
     color: rgb(253, 249, 249);
     margin-left: 10vw;
     text-align: left;
@@ -178,7 +170,7 @@ p {
         }
 .aboutTitle{
     font-family: Verdana, Tahoma, sans-serif;
-    font-size: 30px;
+    font-size: xx-large;
     margin-top: 10vh;
     color: rgb(248, 247, 247);
     text-align: center;
@@ -189,16 +181,15 @@ p {
 }
 .projects{
     text-align: center;
-    font-size: 30px;
-    margin-top: 10vh;
-    
+    font-size: xx-large;
+       
 }
 .Javascript{
     text-decoration: none;
 }
 .Javascript p{
     margin-top: 15vh;
-    font-size: 45px;
+    font-size: x-large;
     text-align: center;
     text-decoration: none;
     list-style: none;
@@ -206,13 +197,13 @@ p {
 }
 .SQL p{
     margin-top: 5vh;
-    font-size: 45px;
+    font-size: x-large;
     text-decoration: none;
     list-style: none;
 }
 .Python p{
     text-align: center;
-    font-size: 45px;
+    font-size: x-large;
     margin-top: 5vh;
     text-decoration: none;
 }
@@ -227,7 +218,6 @@ p {
     margin-top: 10vh;
 	display: table;
 	height: auto;
-	font-size: 0;
     width: 80vw;
     height: 65vh;
     margin-left: 10vw;
@@ -267,36 +257,37 @@ p {
 	opacity: 1;
 }
 .Tableau{
-    top: 0;
+    margin left: 5vw;
     width: 90vw;
-    height: 30vh;
-    margin-left: 5vw;
+    height: auto;
     background-color: black;
-    margin-top: 80px;
-    grid-template-columns: auto auto auto;
-    margin-left: 10vw;
+    text-align: center;
+    font-size: large;
     display: grid;
-    gap: 3vh 3vw;
-    padding: 10px;
-    border-radius: 25px;
-    margin: auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
 }
 .Tableau div{
-    height: 30vh;
-    width: 40vw;
-    background-color: #000;        
+    margin-left: 5vw;
+    margin-top: 5vh;
+    height: 20vh;
+    color: white;      
+}
+.Tableau a{
+    margin-top: 5vh;
+    height: 10vh;
+    color: white;
+    text-decoration: none;
 }
 .Tableau img{
-    display: grid;
-    width: 25vw;
-    height: 30vh;
-    text-align: center;
-    font-size: 16;
+    height: 20vh;
+    width: 15vw;
+    object-fit: cover;
 }
 .Gamestitle p{
     margin-top: 5vh;
     text-align: center;
-    font-size: 25px;
+    font-size: x-large;
 }
 .projectGames{
         width: 90vw;
@@ -329,7 +320,7 @@ p {
         }
 .row1 {
     height: 150px;
-    font-size: 20px;
+    font-size: larger;
 }
 .row1 a{
     list-style: none;
@@ -378,6 +369,7 @@ p {
     margin left: 10vw;
     width: 90vw;
     height: auto;
+    font-size: large;
     background-color: black;
     text-align: center;
     display: grid;
@@ -385,8 +377,8 @@ p {
     grid-template-rows: auto;
     }
 .queries div{
-    margin-left: 7vw;
-        height: 30vh;
+    margin-left: 5vw;
+        height: auto;
         color: white;
     }
 .queries a{

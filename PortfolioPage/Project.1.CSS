@@ -183,11 +183,12 @@ p {
 .emailText{
     color: #fff;
     text-align: center;
+    bottom: 0;
 }
 .projects{
+    margin-top: 10vh;
     text-align: center;
-    font-size: xx-large;
-       
+    font-size: xxx-large;
 }
 .Javascript{
     text-decoration: none;
@@ -217,7 +218,6 @@ p {
     margin-left: 10vw;
     color: black;
     text-align: left;
-    margin-top: 80px;
 }
 #video_player {
     margin-top: 10vh;
@@ -345,7 +345,7 @@ p {
 .Pythonscripts {
     margin left: 5vw;
     width: 90vw;
-    height: 20vh;
+    height: 50vh;
     background-color: black;
     text-align: center;
     display: grid;
@@ -355,12 +355,13 @@ p {
 .Pythonscripts div{
     margin-left: 5vw;
     margin-top: 5vh;
-    height: 20vh;
+    height: auto;
     color: white;
+    background-color: black;
 }
-.Pythonscripts a{
+.Pythonscripts a{;
     margin-top: 5vh;
-    height: 10vh;
+    height: auto;
     color: white;
     text-decoration: none;
     
@@ -378,6 +379,7 @@ p {
     background-color: black;
     text-align: center;
     display: grid;
+    margin-top: 5vh;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
     }

@@ -48,8 +48,8 @@
     }
   
     function handle(delta) {
-        var time = 1000;
-        var distance = 300;
+        var time = 500;
+        var distance = 700;
   
         $('html, body').stop().animate({
             scrollTop: $(window).scrollTop() - (distance * delta)

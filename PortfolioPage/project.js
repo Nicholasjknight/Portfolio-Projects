@@ -40,3 +40,11 @@ window.addEventListener('scroll', function() {
     });
 });
 
+    function playVideo(event, videoSrc) {
+        event.preventDefault();
+        var mainVideo = document.getElementById('main_video');
+        mainVideo.src = videoSrc;
+        mainVideo.play();
+    }
+
+

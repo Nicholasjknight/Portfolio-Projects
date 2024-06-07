@@ -61,7 +61,7 @@ header {
 #searchButton img {
     width: 20px;
     height: 20px;
-    margin-left: 5px; /* Adjust this value to position the icon */
+    margin-left: 5px; 
 }
 
 .navbar {
@@ -100,7 +100,7 @@ header {
     height: 200%;
     margin-left: -45vw;
     margin-top: -30vh;
-    background-image: url(./images/an-image-of-space-and-stars-that-will-be-used-for-a-b.jpg); /* Add your rotating background image here */
+    background-image: url(./images/an-image-of-space-and-stars-that-will-be-used-for-a-b.jpg); 
     background-repeat: repeat-y;
     background-size: cover;
     z-index: 1;

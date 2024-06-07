@@ -1,3 +1,4 @@
+/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body, html {
     scroll-behavior: smooth;
 }
 
+/* Header styles */
 header {
     display: flex;
     flex-direction: column;
@@ -32,7 +34,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
+    width: 100%;
 }
 
 .search-container {
@@ -96,9 +98,9 @@ header {
     left: 0;
     width: 200%;
     height: 200%;
-    margin-left: -30vw;
+    margin-left: -45vw;
     margin-top: -30vh;
-    background-image: url(./images/an-image-of-space-and-stars-that-will-be-used-for-a-b.jpg); 
+    background-image: url(./images/an-image-of-space-and-stars-that-will-be-used-for-a-b.jpg); /* Add your rotating background image here */
     background-repeat: repeat-y;
     background-size: cover;
     z-index: 1;
@@ -138,7 +140,6 @@ header {
 
 .parallax5 {
     background-image: url(./images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg); /* Add your actual image path */
-    
     height: 100vh;
 }
 
@@ -148,7 +149,6 @@ header {
     height: 100vh;
 }
 
-
 .content {
     padding: 20px;
     z-index: 2; /* Ensure the content is above the background */
@@ -156,7 +156,6 @@ header {
     background-color: #1d1d1d;
     opacity: .7;
 }
-
 
 h2 {
     margin-top: -40vh;
@@ -171,11 +170,12 @@ h2 {
     font-size: 36px;
 }
 
-.projects{
+.projects {
     text-align: center;
     font-size: xxx-large;
     z-index: 3;
 }
+
 .Javascript {
     position: absolute;
     top: 10%; /* Adjust the top position as needed */
@@ -198,76 +198,87 @@ h2 {
     z-index: 2;
 }
 
-.SQL p{
+.SQL p {
     margin-top: 5vh;
     font-size: xx-large;
     text-decoration: none;
     list-style: none;
     z-index: 3;
     font-weight: bolder;
-    }
-.Python p{
+}
+
+.Python p {
     text-align: center;
     font-size: xx-large;
     margin-top: 5vh;
     text-decoration: none;
     z-index: 3;
 }
-.projectTitle{
+
+.projectTitle {
     width: 80vw;
     margin-left: 10vw;
     color: black;
     text-align: left;
     z-index: 3;
 }
+
 #video_player {
     margin-top: 10vh;
-	display: table;
-	height: auto;
+    display: table;
+    height: auto;
     width: 80vw;
     height: 65vh;
     margin-left: 0;
-	background: rgb(5, 5, 5);
+    background: rgb(5, 5, 5);
     border-radius: 10px;
     z-index: 3;
 }
+
 #video_player video,
 #video_player figcaption {
-	display: table-cell;
-	vertical-align: top;
+    display: table-cell;
+    vertical-align: top;
     height: 65vh;
     overflow: hidden;
     border-radius: 10px;
     z-index: 3;
-        }
-.figHeight{
+}
+
+.figHeight {
     height: 20vh;
 }
+
 #video_player figcaption {
-	width: 20vw;
+    width: 20vw;
     overflow: hidden;
     z-index: 3;
-        }
+}
+
 #video_player figcaption:hover {
     overflow: hidden;
     overflow-y: scroll;
     z-index: 3;
-                }
+}
+
 #video_player figcaption a {
     display: block;
-	opacity: .5;
-	transition: 1s;
+    opacity: .5;
+    transition: 1s;
     z-index: 3;
 }
+
 #video_player figcaption a img,
-	figure video {
-		width: 100%;
-		height: auto;
-        z-index: 3;
+figure video {
+    width: 100%;
+    height: auto;
+    z-index: 3;
 }
+
 #video_player figcaption a:hover {
-	opacity: 1;
+    opacity: 1;
 }
+
 .Tableau {
     display: flex;
     flex-direction: column;
@@ -329,7 +340,6 @@ h2 {
     width: 90vw;
     max-width: 40vw;
     max-height: 50vh;
-
     display: grid;
     grid-template-columns: auto auto;
     gap: 3vh 3vw;
@@ -352,11 +362,9 @@ h2 {
 }
 
 .Pythonscripts {
-    
     top: 0;
     width: 90vw;
     height: 100%;
-    
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto;
@@ -369,8 +377,8 @@ h2 {
     height: auto; /* Adjust as needed */
     font-size: larger;
     text-align: left;
-    
 }
+
 .row1 a {
     display: grid;
     grid-template-columns: auto;
@@ -396,7 +404,8 @@ h2 {
     height: 20vh;
     width: 100%;
 }
-.icons{
+
+.icons {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     margin: auto;
@@ -404,13 +413,15 @@ h2 {
     height: 4vh;
     gap: 2vh 3vw;
     text-align: center;
-  }
-.icons a{
+}
+
+.icons a {
     display: grid;
     top: 0;
     text-align: center;
 }
-.icons img{
+
+.icons img {
     margin-top: auto;
     display: grid;
     width: 3vw;
@@ -419,14 +430,15 @@ h2 {
     max-width: 25px;
     text-align: center;
 }
-.icons a:hover{
+
+.icons a:hover {
     background-color: #000;
     display: block;
-	opacity: .5;
-	transition: 1s;
+    opacity: .5;
+    transition: 1s;
 }
 
-.queries{
+.queries {
     margin-left: 10vw;
     width: 90vw;
     height: auto;
@@ -437,45 +449,52 @@ h2 {
     margin-top: 5vh;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
-    }
-.queries div{
-    
-        height: auto;
-        color: white;
-    }
-.queries a{
-        margin-top: 5vh;
-        height: 20vh;
-        color: white;
-        text-decoration: none;
-        
-    }
-.queries img{
-        height: 20vh;
-        width: 15vw;
-        object-fit: cover;
-    }
+}
+
+.queries div {
+    height: auto;
+    color: white;
+}
+
+.queries a {
+    margin-top: 5vh;
+    height: 20vh;
+    color: white;
+    text-decoration: none;
+}
+
+.queries img {
+    height: 20vh;
+    width: 15vw;
+    object-fit: cover;
+}
+
 .aboutism, .emailText {
     padding: 20px;
     z-index: 2;
 }
+
 .mankave {
     top: 0;
     display: grid;
     grid-template-columns: auto;
     font-size: xx-large;
 }
+
 .mankave a {
     padding-top: 5vh;
     color: aliceblue;
 }
+
 .mankave a:hover {
     color: red;
     opacity: 7;
 }
-.content2 a{
+
+.content2 a {
     color: aliceblue;
 }
+
 footer {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -492,5 +511,111 @@ footer {
     }
     100% {
         transform: scale(2) rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 768px) {
+    .header-content {
+        width: 90vw;
+    }
+
+    .navbar {
+        flex-direction: row;
+        
+    }
+
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+    .aboutism {
+        height: 100vh;
+        width: 100vw;
+    
+    }
+
+    .projectsGames, .Pythonscripts, .queries {
+        grid-template-rows: auto;
+        align-self: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .Tableau .row1, .icons {
+        width: 100%;
+        padding: 2.5%;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .Tableau .row1 a, .icons a {
+        width: 100%;
+        padding: 2.5%;
+    }
+
+    #video_player {
+        width: 95%;
+        height: auto;
+        text-align: center;
+        margin-left: 2.5%;
+    }
+
+    #video_player figcaption {
+        width: 30%;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    .row1 h3 {
+        width: 80%;
+        font-size: 20px;
+    }
+    .queries {
+        margin-left: 5vw;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+
+    .projects {
+        font-size: x-large;
+    }
+    .projects p {
+        display: none;
+    }
+    .projectsGames {
+        background-color: none;
+        width: 100vw;
+        left: 5%;
+    }
+    .projectsGames .row1{
+        width: 40vw;
+        margin-left: 0;
+        padding: 10vw;
+    }
+    .Javascript p, .Gamestitle p, .Python p {
+        font-size: large;
+    }
+    .icons {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto auto auto auto auto;
+        width: 100%;
+    }
+    .icons a{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        width: 70%;
+    }
+    .rotating-background {
+        background-size: cover;
     }
 }

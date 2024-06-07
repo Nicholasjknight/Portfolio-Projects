@@ -2,182 +2,207 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Project.1.CSS">
-    <link rel="icon" type="image/x-icon" href="./images/Wygos.jpg">
-    <title>NKnight's Portfolio-Page</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Nicholas Knight's Portfolio</title>
 </head>
-<nav>
-  <h2>Nicholas Knight's Portfolio-Page</h2>
-  <div class="sideLinks">
-  <ul>
-  <li class="current"><a href="projects.html">Home</a></li>
-  <li class="current"><a href="#about">About</a></li>
-  <li class="current"><a href="#projects">Projects</a></li>
-  <li class="current"><a href="projects.html">Scripts</a></li>
-<li class="email">
-  <a href="mailto:Nicholas.jknight@yahoo.com">Email Me</a></li>
-  <div class="icons">
-    <a href="https://github.com/Nicholasjknight/Portfolio-Projects.git" target="_blank"><img src="./images/GithubIcon.png" title="GitHub Repositories"></a>
-    <a href="https://www.facebook.com/profile.php?id=100013964955614" target="_blank"><img src="./images/facebook-icon.png" title="Facebook"></a>
-    <a href="https://www.youtube.com/channel/UChI-xkk3bZTl_ZH4UcY1cMg" target="_blank"><img src="./images/youtube-icon.png" title="You Tube"></a>
-    <a href="https://discord.gg/mdMEVVmY" target="_blank"><img src="./images/discord-icon.png" title="Discord"></a>
-    <a href="https://www.twitch.tv/twitched369" target="_blank"><img src="./images/twitch-icon.png" title="Twitch"></a>
-    <a href="https://www.linkedin.com/in/nicholas-knight-23010b23a/" target="_blank"><img src="./images/linkedin-icon.png" title="Linked-in"></a>
-    </div>
-      </ul>  
-</div>
-</nav>
+<body onload="scrollToTop()">
+    <div class="rotating-background"></div>
+    <header>
+        <div class="logo">
+            <h1></h1>
+        </div>
+        <div class="header-content">
+            <form id="searchForm" class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button type="submit" id="searchButton">
+                    <img src="./images/free-search-icon-2911-thumb.png" alt="Search">
+                </button>
+            </form>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="email">
+                        <a href="mailto:Nicholas.jknight@yahoo.com">Email Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<body>
-  <div class="hero-back">
-    <img src="./images/computersetup.png" width="100vw"></div>  
-    
-  <div class="boxes">
-    <span id="box"><a href="https://www.knightgroup.com" target="_blank"><img src=".//images/knightgroup-black.png" title="KnightGroup.com" target="_blank"></a>
-    </span>
-    <span id="box"><img src="./images/slogo.png"></a></span>
-    <span id="box"><img src="./images/Wygos.png">
+    <section id="home" class="parallax parallax1">
+        <div class="TopPage">
+            <h2>Nicholas Knight's</h2>
+        </div>
+    </section>
+
+    <section id="about" class="parallax parallax2">
+        <div class="content">
+            <h2 class="section-title">About Me</h2>
+            <p class="aboutism">
+                
+                    Welcome to my portfolio website! This portfolio page is an old version which will need to be updated. My name is Nicholas Knight, and I'm passionate about business management and technology. With a Bachelor's degree in Business Administration Management from St. Petersburg College, I've cultivated a unique skill set that merges my love for business strategy with my expertise in programming and web development.
+                    <br>
+                    <br>
+                    Growing up in an environment steeped in IT and business management, I've honed my abilities by creating numerous queries, websites, and e-commerce stores using HTML5, CSS, and JavaScript. Additionally, I've been actively involved in the JavaScript programming community, collaborating on projects ranging from gaming applications to web development solutions.
+                
+                    Throughout my career, I've had the opportunity to manage teams across various fields, leveraging my leadership skills to drive success and foster collaboration. My approach to management is rooted in effective communication, strategic thinking, and a relentless pursuit of excellence.
+                    <br>
+                    <br>
+                    The inspiration behind this portfolio website stems from my desire to showcase my work and skill sets to potential employers and clients. By providing a glimpse into my projects and capabilities, I aim to create a "wow factor" that highlights my creativity, technical proficiency, and commitment to excellence.
+                
+                    In designing this website, I prioritize accessibility and display, ensuring that visitors can easily navigate and engage with the content. From an always-available search bar to captivating visuals such as 4K videos and dynamic banners, I strive to create an immersive experience that leaves a lasting impression.
+                    <br>
+                    <br>
+                    I'm particularly drawn to businesses with promising growth potential, where I can apply my expertise to drive innovation and success. As a lifelong learner, I'm constantly staying updated with the latest trends and technologies through various apps and analytic software.
+                
+                    Outside of my professional pursuits, you'll often find me indulging in my personal hobbies, which largely revolve around exploring new technologies and learning new skills. With an outgoing personality and a relentless drive to excel, I'm always eager to tackle new challenges and exceed expectations.
+                    <br>
+                    <br>
+                    Thank you for visiting my portfolio website. I look forward to connecting with you and exploring opportunities for collaboration and growth.
+                   <br><br>
+                                  </p>
+        </div>
+    </section>
+    <section id="projects" class="parallax parallax3">
+    <div class="projects" id="projects">
+        <p>Projects</p>
+      <div class="SQL">
+        <p>SQL / T-SQL</p>
+      </div>
+      <div class="queries" id="query">
+          <div class="row1">
+            <h3>MySQL Albums</h3>
+          <a href="./SQLqueries/60minSQL.sql" target="_parent"><img src="./images/MySQL60Min.png"></a></div>
+          <div class="row1">
+            <h3>Covid Project </h3>
+          <a href="./SQLqueries/SQL Covid Project 1.sql" target="_top"><img src="./images/CovidQueries.png"></a></div>
+          <div class="row1">
+            <h3>T-SQL: Subqueries</h3>
+          <a href="./SQLqueries/VideoGameQueries.sql" target="_top"><img src="./images/VideoGameQueries.png"></a></div>
+          <div class="row1">
+            <h3>T-SQL: Subqueries</h3>
+          <a href="./SQLqueries/Subqueries.sql" target="_top"><img src="./images/Subqueries.png"></a></div>
+      </div>
+      
+      <div class="Tableau" id="Tableau">
+        <div class="row1">
+            <a href="https://public.tableau.com/views/CovidDashboard_16933543014790/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">
+                <h3>Tableau - Covid Dashboard</h3>
+                <img src="./images/TableauDashboard.png" alt="Tableau Dashboard">
+            </a>
+            <a href="https://public.tableau.com/views/VideoGameDashboard_16940106263160/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">
+                <h3>Tableau - Game Dashboard</h3>
+                <img src="./images/TableauVideoGames.png" alt="Tableau Dashboard">
+            </a>
+        </div>
     </div>
-<div class="boxes2">
-    <ul><div class="bxtxt"><br>
-    <li>Computer Networking, Development, & Security Systems</li>
-                   </div>
-    <div class="bxtxt"><br>
-      <li>Programming Group</li>
+        </section>
+          <section id="projects-parallax" class="parallax parallax4">
+      <div class="Javascript">
+          <a style="text-decoration: none;"></a>
+        <p>Javascript</p></div>
+        <div class="vidList">
+          <figure id="video_player">
+              <video controls poster="./images/slogo.png">
+                  <source src="./videos/Main.mp4">
+                  <source src="./videos/Main.webm" type="video/webm">
+                  </video>
+              <figcaption><div class="figHeight">
+                  <a href="./videos/Main.mp4"><img src="./images/UOGithub.png" alt="Uses seed if variable met and put on timer"></a>
+                  <a href="./videos/Vid2.mp4"><img src="./images/seed.png" alt="Uses seed if variable met and put on timer"></a>
+                  <a href="./videos/evade.mp4"><img src="./images/evade.png" alt="Casts evasion and displays timer"></a>
+                  <a href="./videos/mount.mp4"><img src="./images/mounting.png" alt="Call back function & status check for mounting"></a>
+                  <a href="./videos/dart.mp4"><img src="./images/darts.png" title="darts" alt="Multiple Functions (darts)"></a>
+                  <a href="./videos/looter.mp4"><img src="./images/looter.png" alt="Complicated Loot Script"></a>
                   </div>
-    <div class="bxtxt">
-      <br>
-      <li>Management & Outsourcing</li>
+                  </figcaption>
+              </figure></div>
+                  </div></section>
+                  <section id="projects-parallax" class="parallax parallax5">
+                    <div class="Gamestitle">
+                        <p>Games Written in Javascript</p>
+                    </div>
+                    <div class="projectsGames">
+                        <div class="row1">
+                            <a href="./JavaScript-Tic-Tac-Toe-master/index.html" target="_blank">Play Tic-Tac-Toe<img src="./images/tictactoeposter.png" alt="Play Tic Tac Toe"></a>
+                        </div>
+                        <div class="row1">
+                            <a href="./Chess-Game-main/index.html" target="_blank">Play Chess<img src="./images/chessposter.png" alt="Play Chess"></a>
+                        </div>
+                    </div></div>
+                </section>
+                <section id="projects-parallax" class="parallax parallax5">
+                    <div class="Python">
+                        <p>Python</p>
+                    
+                    <div class="Pythonscripts">
+                        <div class="row1">
+                            <a href="./PythonScripts/PythonAntiDisarmer.png" target="_parent">Anti-Disarmer<img src="./PythonScripts/PythonAntiDisarmer.png"></a>
+                        </div>
+                        <div class="row1">
+                            <a href="./PythonScripts/autoseed.png" target="_top">Auto-Seed<img src="./PythonScripts/autoseed.png"></a>
+                        </div>
+                        <div class="row1">
+                            <a href="./PythonScripts/autostats.png" target="_top">Auto-Stats<img src="./PythonScripts/autostats.png"></a>
+                        </div>
+                        <div class="row1">
+                            <a href="./PythonScripts/pophorse.png" target="_top">Pop-Horse<img src="./PythonScripts/pophorse.png"></a>
+                        </div>
+                        <div class="row1">
+                            <a href="./PythonScripts/trapbox.png" target="_top">Trap-Box<img src="./PythonScripts/trapbox.png"></a>
+                        </div>
+                        <div class="row1">
+                            <a href="./PythonScripts/whirlwind.png" target="_top">Whirlwind<img src="./PythonScripts/whirlwind.png"></a>
+                        </div>
+                        <div class="row1">
+                            <a href="./PythonScripts/poisonweap.png" target="_top">Poisons Weapon<img src="./PythonScripts/poisonweap.png"></a>
+                        </div>
+                        <div class="row1">
+                            <a href="./PythonScripts/nodachidismount.png" target="_top">No-Dachi Dismount<img src="./PythonScripts/nodachidismount.png"></a>
+                        </div>
+                    </div></div>
+                </section>
+                
+                
+    <section id="projects-parallax" class="parallax parallax5"></section>
+
+    <section id="contact" class="parallax parallax4">
+        <div class="content2">
+            <h2 class="section-title">Contact</h2>
+            <p class="emailText">
+                Contact me at: <a href="mailto:nickknight488@gmail.com">nickknight488@gmail.com.com</a>
+            </p>
+            <p>Visit My Social Media</p>
         
-    </div></ul>
-
-</div>
-<div class="aboutTitle"><h2>About</h2></div>
-<div class="aboutism" id="about">
- <br>
-<p>  
- 
-  Welcome to my portfolio website! This portfolio page is an old version which will need to be updated. My name is Nicholas Knight, and I'm passionate about business management and technology. With a Bachelor's degree in Business Administration Management from St. Petersburg College, I've cultivated a unique skill set that merges my love for business strategy with my expertise in programming and web development.
-  <br>
-  <br>
-  Growing up in an environment steeped in IT and business management, I've honed my abilities by creating numerous queries, websites, and e-commerce stores using HTML5, CSS, and JavaScript. Additionally, I've been actively involved in the JavaScript programming community, collaborating on projects ranging from gaming applications to web development solutions.
-  <br>
-  <br>
-  Throughout my career, I've had the opportunity to manage teams across various fields, leveraging my leadership skills to drive success and foster collaboration. My approach to management is rooted in effective communication, strategic thinking, and a relentless pursuit of excellence.
-  <br>
-  <br>
-  The inspiration behind this portfolio website stems from my desire to showcase my work and skill sets to potential employers and clients. By providing a glimpse into my projects and capabilities, I aim to create a "wow factor" that highlights my creativity, technical proficiency, and commitment to excellence.
-  <br>
-  <br>
-  In designing this website, I prioritize accessibility and display, ensuring that visitors can easily navigate and engage with the content. From an always-available search bar to captivating visuals such as 4K videos and dynamic banners, I strive to create an immersive experience that leaves a lasting impression.
-  <br>
-  <br>
-  I'm particularly drawn to businesses with promising growth potential, where I can apply my expertise to drive innovation and success. As a lifelong learner, I'm constantly staying updated with the latest trends and technologies through various apps and analytic software.
-  <br>
-  <br>
-  Outside of my professional pursuits, you'll often find me indulging in my personal hobbies, which largely revolve around exploring new technologies and learning new skills. With an outgoing personality and a relentless drive to excel, I'm always eager to tackle new challenges and exceed expectations.
-  <br>
-  <br>
-  Thank you for visiting my portfolio website. I look forward to connecting with you and exploring opportunities for collaboration and growth.
- <br><br>
-    </p>
-</div>
-
-<div class="projects" id="projects">
-  <p>Projects</p>
-<div class="SQL">
-  <p>SQL / T-SQL</p>
-</div>
-<div class="queries" id="query">
-    <div class="row1">
-    <a href="./SQLqueries/60minSQL.sql" target="_parent">MySQL Albums<img src="./images/MySQL60Min.png"></a></div>
-    <div class="row1">
-    <a href="./SQLqueries/SQL Covid Project 1.sql" target="_top">T-SQL: Covid Project<img src="./images/CovidQueries.png"></a></div>
-    <div class="row1">
-    <a href="./SQLqueries/VideoGameQueries.sql" target="_top">T-SQL: Video Game Project<img src="./images/VideoGameQueries.png"></a></div>
-    <div class="row1">
-    <a href="./SQLqueries/Subqueries.sql" target="_top">T-SQL: Subqueries<img src="./images/Subqueries.png"></a></div>
-</div>
-
-<div class="Tableau" id="Tableau">
-    <div class="row1">
-        <a href="https://public.tableau.com/views/CovidDashboard_16933543014790/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">Tableau - Covid Dashboard<img src="./images/TableauDashboard.png" alt="Tablea Dashboard">
-        </div>
-    <div class="row1">
-        <a href="https://public.tableau.com/views/VideoGameDashboard_16940106263160/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">Tableau - Video Game Dashboard<img src="./images/TableauVideoGames.png" alt="Tablea Dashboard">
-        </div>
-    </div>
-
-<div class="Javascript">
-    <a style="text-decoration: none;"></a>
-  <p>Javascript</p></div>
-  <div class="vidList">
-    <figure id="video_player">
-        <video controls poster="./images/slogo.png">
-            <source src="./videos/Main.mp4">
-            <source src="./videos/Main.webm" type="video/webm">
-            </video>
-        <figcaption><div class="figHeight">
-            <a href="./videos/Main.mp4"><img src="./images/UOGithub.png" alt="Uses seed if variable met and put on timer"></a>
-            <a href="./videos/Vid2.mp4"><img src="./images/seed.png" alt="Uses seed if variable met and put on timer"></a>
-            <a href="./videos/evade.mp4"><img src="./images/evade.png" alt="Casts evasion and displays timer"></a>
-            <a href="./videos/mount.mp4"><img src="./images/mounting.png" alt="Call back function & status check for mounting"></a>
-            <a href="./videos/dart.mp4"><img src="./images/darts.png" title="darts" alt="Multiple Functions (darts)"></a>
-            <a href="./videos/looter.mp4"><img src="./images/looter.png" alt="Complicated Loot Script"></a>
+        <div class="icons">
+            <a href="https://github.com/Nicholasjknight/Portfolio-Projects.git" target="_blank"><img src="./images/GithubIcon.png" title="GitHub Repositories"></a>
+            <a href="https://www.facebook.com/profile.php?id=100013964955614" target="_blank"><img src="./images/facebook-icon.png" title="Facebook"></a>
+            <a href="https://www.youtube.com/channel/UChI-xkk3bZTl_ZH4UcY1cMg" target="_blank"><img src="./images/youtube-icon.png" title="You Tube"></a>
+            <a href="https://discord.gg/mdMEVVmY" target="_blank"><img src="./images/discord-icon.png" title="Discord"></a>
+            <a href="https://www.twitch.tv/twitched369" target="_blank"><img src="./images/twitch-icon.png" title="Twitch"></a>
+            <a href="https://www.linkedin.com/in/nicholas-knight-23010b23a/" target="_blank"><img src="./images/linkedin-icon.png" title="Linked-in"></a>
             </div>
-            </figcaption>
-        </figure></div>
-            </div>
-<div class="Gamestitle">
-    <p>Games Written in Javascript</p>
-</div>
-<div class="projectsGames" id="projects">
-<div class="row1">
-    <a href="./JavaScript-Tic-Tac-Toe-master/index.html" target="_blank">Play Tic-Tac-Toe<img src="./images/tictactoeposter.png" alt="Play Tic Tac Toe">
-    </div>
-<div class="row1">
-    <a href="./Chess-Game-main/index.html" target="_blank">Play Chess<img src="./images/chessposter.png" alt="Play Chess">
-    </div>
-</div>
-<div class="Python">
-    <a style="text-decoration: none;"></a>
-  <p>Python</p>
-</div>
-<div class="Pythonscripts">
-    <div class="row1">
-<a href="./PythonScripts/PythonAntiDisarmer.png" target="_parent">Anti-Disarmer<img src="./PythonScripts/PythonAntiDisarmer.png"></a></div>
-<div class="row1">
-<a href="./PythonScripts/autoseed.png" target="_top">Auto-Seed<img src="./PythonScripts/autoseed.png"></a></div>
-<div class="row1">
-<a href="./PythonScripts/autostats.png" target="_top">Auto-Stats<img src="./PythonScripts/autostats.png"></a></div>
-<div class="row1">
-<a href="./PythonScripts/pophorse.png" target="_top">Pop-Horse<img src="./PythonScripts/pophorse.png"></a></div>
-<div class="row1">
-<a href="./PythonScripts/trapbox.png" target="_top">Trap-Box<img src="./PythonScripts/trapbox.png"></a></div>
-<div class="row1">
-<a href="./PythonScripts/whirlwind.png" target="_top">Whirlwind<img src="./PythonScripts/whirlwind.png"></a></div>
-<div class="row1">
-<a href="./PythonScripts/poisonweap.png" target="_top">Poisons Weapon<img src="./PythonScripts/poisonweap.png"></a></div>
-<div class="row1">
-<a href="./PythonScripts/nodachidismount.png" target="_top">No-Dachi Dismount<img src="./PythonScripts/nodachidismount.png"></a></div>
-</div>
+              </ul>  
+        </div>
+    </section>
+
+    <section id="contact-parallax" class="parallax parallax6">
+        <div class="mankave">
+        <h1>Check out my E-Commerce Store! </h1>
+        
+        <a href="https://ManKave.Store" target="_blank">www.ManKave.Store</a>
+        </div>
+    </section>
+
     <footer>
-      <div class="emailText">
-          <br>
-          <br>
-          <a>Email: NKnight@KnightGroup.com</a>
-                    </div></footer>
+        <p>&copy; 2024 Nicholas Knight. All rights reserved.</p>
+    </footer>
 
-  <script src="./project.js"></script>
-  <script type="text/javascript">
-    $(window).scroll(function() {
-      var scrollPos = $(this).scrollTop();
-      $(".hero-back").css({
-        'background-size' : 100 + scrollPos + '%'
-      });
-    });
-  </script>
+    <script src="project.js"></script>
+
+        
 </body>
+</html>

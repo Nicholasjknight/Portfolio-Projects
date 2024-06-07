@@ -1,4 +1,3 @@
-/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@ body, html {
     scroll-behavior: smooth;
 }
 
-/* Header styles */
 header {
     display: flex;
     flex-direction: column;
@@ -24,12 +22,6 @@ header {
     z-index: 3;
 }
 
-.logo h1 {
-    color: #fff;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
 .header-content {
     display: flex;
     flex-direction: column;
@@ -38,6 +30,7 @@ header {
 }
 
 .search-container {
+    padding: 10px 0 10px 0;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -91,7 +84,10 @@ header {
 .nav-links a:hover {
     color: red;
 }
-
+.TopPage {
+    font-size: xx-large;
+    margin-top: -2%;
+}
 .rotating-background {
     position: fixed;
     top: 0;
@@ -131,27 +127,27 @@ header {
 }
 
 .parallax3 {
-    background-image: url(./images/2351d72f-5520-4818-b12e-f87d93aff036.png); /* Replace with your actual image path */
+    background-image: url(./images/2351d72f-5520-4818-b12e-f87d93aff036.png); 
 }
 
 .parallax4 {
-    background-image: url(./images/360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.png); /* Replace with your actual image path */
+    background-image: url(./images/360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.png); 
 }
 
 .parallax5 {
-    background-image: url(./images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg); /* Add your actual image path */
-    height: 100vh;
+    background-image: url(./images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg); 
+    height: 50vh;
 }
 
 .parallax6 {
-    background-image: url(./images/Fully\ TransLogo.png); /* Add your actual image path */
+    background-image: url(./images/Fully\ TransLogo.png); 
     background-size: contain;
     height: 100vh;
 }
 
 .content {
     padding: 20px;
-    z-index: 2; /* Ensure the content is above the background */
+    z-index: 2; 
     padding-bottom: 10vh;
     background-color: #1d1d1d;
     opacity: .7;
@@ -160,7 +156,6 @@ header {
 h2 {
     margin-top: -40vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 75px;
     color: rgb(226, 224, 224);
 }
 
@@ -178,7 +173,7 @@ h2 {
 
 .Javascript {
     position: absolute;
-    top: 10%; /* Adjust the top position as needed */
+    top: 10%; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -207,13 +202,6 @@ h2 {
     font-weight: bolder;
 }
 
-.Python p {
-    text-align: center;
-    font-size: xx-large;
-    margin-top: 5vh;
-    text-decoration: none;
-    z-index: 3;
-}
 
 .projectTitle {
     width: 80vw;
@@ -250,24 +238,26 @@ h2 {
 }
 
 #video_player figcaption {
-    width: 20vw;
-    overflow: hidden;
+    width: 30%;
+    overflow-y: auto;
+    height: 65vh;
     z-index: 3;
 }
-
+#video_player figcaption video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
 #video_player figcaption:hover {
     overflow: hidden;
     overflow-y: scroll;
     z-index: 3;
 }
 
-#video_player figcaption a {
-    display: block;
-    opacity: .5;
-    transition: 1s;
-    z-index: 3;
+#video_player figcaption img {
+    width: 100%;
+    height: auto;
 }
-
 #video_player figcaption a img,
 figure video {
     width: 100%;
@@ -336,22 +326,22 @@ figure video {
 
 .projectsGames {
     position: absolute;
-    top: 15vh;
+    top: 10vh;
     width: 90vw;
-    max-width: 40vw;
-    max-height: 50vh;
+    padding: 15px;
     display: grid;
     grid-template-columns: auto auto;
-    gap: 3vh 3vw;
-    background: none;
-    padding: 10px;
+    height: auto;
+    gap: 10%;
     border-radius: 25px;
 }
+
 
 .Python {
     text-align: center;
     margin-top: 5vh;
     z-index: 3;
+    padding-top: 50px;
 }
 
 .Python p {
@@ -362,19 +352,41 @@ figure video {
 }
 
 .Pythonscripts {
-    top: 0;
-    width: 90vw;
-    height: 100%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Styles for each row item */
+.Pythonscripts .row1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Pythonscripts .row1 a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Pythonscripts .row1 img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Fixed height for all images */
+    object-fit: cover;
 }
 
 .row1 {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    height: auto; /* Adjust as needed */
+    height: auto; 
     font-size: larger;
     text-align: left;
 }
@@ -424,31 +436,29 @@ figure video {
 .icons img {
     margin-top: auto;
     display: grid;
-    width: 3vw;
-    height: 3vh;
+
     max-height: 25px;
     max-width: 25px;
     text-align: center;
+    margin-left: 1vw;
 }
 
 .icons a:hover {
-    background-color: #000;
+    background-color: rgb(248, 4, 4);
     display: block;
+    text-align: center;
     opacity: .5;
     transition: 1s;
 }
 
 .queries {
-    margin-left: 10vw;
     width: 90vw;
-    height: auto;
     font-size: large;
-    background-color: none;
     text-align: center;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
     margin-top: 5vh;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto;
 }
 
 .queries div {
@@ -464,14 +474,19 @@ figure video {
 }
 
 .queries img {
-    height: 20vh;
-    width: 15vw;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
 .aboutism, .emailText {
     padding: 20px;
     z-index: 2;
+    margin-bottom: 20px;
+}
+.emailText a:hover{
+    color: red;
+    opacity: .7;
 }
 
 .mankave {
@@ -495,6 +510,7 @@ figure video {
     color: aliceblue;
 }
 
+
 footer {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -514,11 +530,14 @@ footer {
     }
 }
 
-/* Responsive Design */
+
 
 @media only screen and (max-width: 768px) {
     .header-content {
         width: 90vw;
+    }
+    .TopPage h2{
+     margin-top: -115%;   
     }
 
     .navbar {
@@ -539,6 +558,9 @@ footer {
         width: 100vw;
     
     }
+    .parallax2 {
+        height: 100%;
+    }
 
     .projectsGames, .Pythonscripts, .queries {
         grid-template-rows: auto;
@@ -546,6 +568,7 @@ footer {
         width: 100%;
         margin: 0;
     }
+    
 
     .Tableau .row1, .icons {
         width: 100%;
@@ -577,9 +600,24 @@ footer {
         width: 80%;
         font-size: 20px;
     }
-    .queries {
-        margin-left: 5vw;
+    .Pythonscripts {
+        grid-template-columns: repeat(4, 1fr);
+        
+        
     }
+
+    .Pythonscripts .row1 img {
+        height: 150px; 
+        
+    }
+
+    .Python p {
+        font-size: 1.5em; 
+        margin-bottom: 20px; 
+    }
+    .queries {
+        margin: auto;
+            }
     .section-title {
         font-size: 28px;
     }

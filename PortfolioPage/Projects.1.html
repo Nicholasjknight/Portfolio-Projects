@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico.jpg">
     <link rel="stylesheet" href="Project.1.CSS">
+    
     <title>Nicholas Knight's Portfolio</title>
 </head>
 <body onload="scrollToTop()">
@@ -43,7 +45,8 @@
             <h2 class="section-title">About Me</h2>
             <p class="aboutism">
                 
-                    Welcome to my portfolio website! This portfolio page is an old version which will need to be updated. My name is Nicholas Knight, and I'm passionate about business management and technology. With a Bachelor's degree in Business Administration Management from St. Petersburg College, I've cultivated a unique skill set that merges my love for business strategy with my expertise in programming and web development.
+                    Welcome to my portfolio website!                   
+                    My name is Nicholas Knight, and I'm passionate about business management and technology. With a Bachelor's degree in Business Administration Management from St. Petersburg College, I've cultivated a unique skill set that merges my love for business strategy with my expertise in programming and web development. I just recently updated this portfolio site; however, the projects within this site still need to be updated. For now I am filling out my portfolio layout with my old projects.
                     <br>
                     <br>
                     Growing up in an environment steeped in IT and business management, I've honed my abilities by creating numerous queries, websites, and e-commerce stores using HTML5, CSS, and JavaScript. Additionally, I've been actively involved in the JavaScript programming community, collaborating on projects ranging from gaming applications to web development solutions.
@@ -53,11 +56,7 @@
                     <br>
                     The inspiration behind this portfolio website stems from my desire to showcase my work and skill sets to potential employers and clients. By providing a glimpse into my projects and capabilities, I aim to create a "wow factor" that highlights my creativity, technical proficiency, and commitment to excellence.
                 
-                    In designing this website, I prioritize accessibility and display, ensuring that visitors can easily navigate and engage with the content. From an always-available search bar to captivating visuals such as 4K videos and dynamic banners, I strive to create an immersive experience that leaves a lasting impression.
-                    <br>
-                    <br>
-                    I'm particularly drawn to businesses with promising growth potential, where I can apply my expertise to drive innovation and success. As a lifelong learner, I'm constantly staying updated with the latest trends and technologies through various apps and analytic software.
-                
+                                    
                     Outside of my professional pursuits, you'll often find me indulging in my personal hobbies, which largely revolve around exploring new technologies and learning new skills. With an outgoing personality and a relentless drive to excel, I'm always eager to tackle new challenges and exceed expectations.
                     <br>
                     <br>
@@ -77,7 +76,7 @@
             <h3>MySQL Albums</h3>
           <a href="./SQLqueries/60minSQL.sql" target="_parent"><img src="./images/MySQL60Min.png"></a></div>
           <div class="row1">
-            <h3>Covid Project </h3>
+            <h3>T-SQL: Covid Deaths</h3>
           <a href="./SQLqueries/SQL Covid Project 1.sql" target="_top"><img src="./images/CovidQueries.png"></a></div>
           <div class="row1">
             <h3>T-SQL: Subqueries</h3>
@@ -100,27 +99,30 @@
         </div>
     </div>
         </section>
-          <section id="projects-parallax" class="parallax parallax4">
-      <div class="Javascript">
-          <a style="text-decoration: none;"></a>
-        <p>Javascript</p></div>
-        <div class="vidList">
-          <figure id="video_player">
-              <video controls poster="./images/slogo.png">
-                  <source src="./videos/Main.mp4">
-                  <source src="./videos/Main.webm" type="video/webm">
-                  </video>
-              <figcaption><div class="figHeight">
-                  <a href="./videos/Main.mp4"><img src="./images/UOGithub.png" alt="Uses seed if variable met and put on timer"></a>
-                  <a href="./videos/Vid2.mp4"><img src="./images/seed.png" alt="Uses seed if variable met and put on timer"></a>
-                  <a href="./videos/evade.mp4"><img src="./images/evade.png" alt="Casts evasion and displays timer"></a>
-                  <a href="./videos/mount.mp4"><img src="./images/mounting.png" alt="Call back function & status check for mounting"></a>
-                  <a href="./videos/dart.mp4"><img src="./images/darts.png" title="darts" alt="Multiple Functions (darts)"></a>
-                  <a href="./videos/looter.mp4"><img src="./images/looter.png" alt="Complicated Loot Script"></a>
-                  </div>
-                  </figcaption>
-              </figure></div>
-                  </div></section>
+        <section id="projects-parallax" class="parallax parallax4">
+            <div class="Javascript">
+                <a style="text-decoration: none;"></a>
+                <p>Javascript</p>
+            </div>
+            <div class="vidList">
+                <figure id="video_player">
+                    <video id="main_video" controls poster="./images/slogo.png">
+                        <source src="" type="video/mp4">
+                        <source src="" type="video/webm">
+                    </video>
+                    <figcaption>
+                        <div class="figHeight">
+                            <a href="./videos/Main.mp4" onclick="return playVideo(event, './videos/Main.mp4');"><img src="./images/UOGithub.png" alt="Uses seed if variable met and put on timer"></a>
+                            <a href="./videos/Vid2.mp4" onclick="return playVideo(event, './videos/Vid2.mp4');"><img src="./images/seed.png" alt="Uses seed if variable met and put on timer"></a>
+                            <a href="./videos/evade.mp4" onclick="return playVideo(event, './videos/evade.mp4');"><img src="./images/evade.png" alt="Casts evasion and displays timer"></a>
+                            <a href="./videos/mount.mp4" onclick="return playVideo(event, './videos/mount.mp4');"><img src="./images/mounting.png" alt="Call back function & status check for mounting"></a>
+                            <a href="./videos/dart.mp4" onclick="return playVideo(event, './videos/dart.mp4');"><img src="./images/darts.png" title="darts" alt="Multiple Functions (darts)"></a>
+                            <a href="./videos/looter.mp4" onclick="return playVideo(event, './videos/looter.mp4');"><img src="./images/looter.png" alt="Complicated Loot Script"></a>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
                   <section id="projects-parallax" class="parallax parallax5">
                     <div class="Gamestitle">
                         <p>Games Written in Javascript</p>
@@ -137,33 +139,49 @@
                 <section id="projects-parallax" class="parallax parallax5">
                     <div class="Python">
                         <p>Python</p>
-                    
-                    <div class="Pythonscripts">
-                        <div class="row1">
-                            <a href="./PythonScripts/PythonAntiDisarmer.png" target="_parent">Anti-Disarmer<img src="./PythonScripts/PythonAntiDisarmer.png"></a>
+                        <div class="Pythonscripts">
+                            <div class="row1">
+                                <a href="./PythonScripts/PythonAntiDisarmer.png" target="_parent">
+                                    <img src="./PythonScripts/PythonAntiDisarmer.png" alt="Anti-Disarmer">
+                                </a>
+                            </div>
+                            <div class="row1">
+                                <a href="./PythonScripts/autoseed.png" target="_top">
+                                    <img src="./PythonScripts/autoseed.png" alt="Auto-Seed">
+                                </a>
+                            </div>
+                            <div class="row1">
+                                <a href="./PythonScripts/autostats.png" target="_top">
+                                    <img src="./PythonScripts/autostats.png" alt="Auto-Stats">
+                                </a>
+                            </div>
+                            <div class="row1">
+                                <a href="./PythonScripts/pophorse.png" target="_top">
+                                    <img src="./PythonScripts/pophorse.png" alt="Pop-Horse">
+                                </a>
+                            </div>
+                            <div class="row1">
+                                <a href="./PythonScripts/trapbox.png" target="_top">
+                                    <img src="./PythonScripts/trapbox.png" alt="Trap-Box">
+                                </a>
+                            </div>
+                            <div class="row1">
+                                <a href="./PythonScripts/whirlwind.png" target="_top">
+                                    <img src="./PythonScripts/whirlwind.png" alt="Whirlwind">
+                                </a>
+                            </div>
+                            <div class="row1">
+                                <a href="./PythonScripts/poisonweap.png" target="_top">
+                                    <img src="./PythonScripts/poisonweap.png" alt="Poison Weapon">
+                                </a>
+                            </div>
+                            <div class="row1">
+                                <a href="./PythonScripts/nodachidismount.png" target="_top">
+                                    <img src="./PythonScripts/nodachidismount.png" alt="Dismount">
+                                </a>
+                            </div>
                         </div>
-                        <div class="row1">
-                            <a href="./PythonScripts/autoseed.png" target="_top">Auto-Seed<img src="./PythonScripts/autoseed.png"></a>
-                        </div>
-                        <div class="row1">
-                            <a href="./PythonScripts/autostats.png" target="_top">Auto-Stats<img src="./PythonScripts/autostats.png"></a>
-                        </div>
-                        <div class="row1">
-                            <a href="./PythonScripts/pophorse.png" target="_top">Pop-Horse<img src="./PythonScripts/pophorse.png"></a>
-                        </div>
-                        <div class="row1">
-                            <a href="./PythonScripts/trapbox.png" target="_top">Trap-Box<img src="./PythonScripts/trapbox.png"></a>
-                        </div>
-                        <div class="row1">
-                            <a href="./PythonScripts/whirlwind.png" target="_top">Whirlwind<img src="./PythonScripts/whirlwind.png"></a>
-                        </div>
-                        <div class="row1">
-                            <a href="./PythonScripts/poisonweap.png" target="_top">Poison Weapon<img src="./PythonScripts/poisonweap.png"></a>
-                        </div>
-                        <div class="row1">
-                            <a href="./PythonScripts/nodachidismount.png" target="_top">Dismount<img src="./PythonScripts/nodachidismount.png"></a>
-                        </div>
-                    </div></div>
+                    </div>
                 </section>
                 
                 
@@ -202,7 +220,6 @@
     </footer>
 
     <script src="project.js"></script>
-
         
 </body>
 </html>

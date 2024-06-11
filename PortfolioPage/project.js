@@ -36,15 +36,15 @@ window.addEventListener('scroll', function() {
     rotatingBackground.style.transform = `scale(${1 + scrolled / 1000}) rotate(${scrolled / 5}deg)`;
 
     document.querySelectorAll('.parallax').forEach(parallax => {
-        parallax.style.backgroundPositionY = `${scrolled * 0.5}px`;
+        const speed = parallax.getAttribute('data-speed');
+        const yPos = -(scrolled * speed);
+        parallax.style.transform = `translateY(${yPos}px)`;
     });
 });
 
-    function playVideo(event, videoSrc) {
-        event.preventDefault();
-        var mainVideo = document.getElementById('main_video');
-        mainVideo.src = videoSrc;
-        mainVideo.play();
-    }
-
-
+function playVideo(event, videoSrc) {
+    event.preventDefault();
+    var mainVideo = document.getElementById('main_video');
+    mainVideo.src = videoSrc;
+    mainVideo.play();
+}

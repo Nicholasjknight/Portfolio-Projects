@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VX36QR7HJW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX36QR7HJW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-VX36QR7HJW');
-</script>
+      gtag('config', 'G-VX36QR7HJW');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nicholas Knight's portfolio showcasing projects in SQL, JavaScript, Python, and Tableau. Explore business management and web development skills.">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico.jpg">
-    <link rel="stylesheet" href="Project.1.CSS">
-    
-    <title>Nicholas Knight's Portfolio</title>
+    <link rel="stylesheet" href="Project1.CSS">
+    <title>Nicholas Knight | Business Management & Web Development Portfolio</title>
 </head>
 <body onload="scrollToTop()">
     <div class="rotating-background"></div>
     <header>
         <div class="logo">
-            <h1></h1>
+            <h1>Nicholas Knight's Portfolio Site</h1>
         </div>
         <div class="header-content">
             <form id="searchForm" class="search-container">
@@ -30,6 +30,7 @@
                     <img src="./images/free-search-icon-2911-thumb.png" alt="Search">
                 </button>
             </form>
+            <div id="searchResults" class="dropdown-results"></div>
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -41,11 +42,16 @@
                 </ul>
             </nav>
         </div>
+        <div class="hamburger-menu">
+            <span>&#9776;</span>
+        </div>
     </header>
 
+
+    <!--- Left this empty incase I want to put something there later-->
     <section id="home" class="parallax parallax1">
         <div class="TopPage">
-            <h2>Nicholas Knight's</h2>
+            
         </div>
     </section>
 
@@ -74,155 +80,185 @@
                                   </p>
         </div>
     </section>
+    <section id="contact-parallax" class="parallax parallax6">
+        <div class="mankave">
+        <h2>Check out my E-Commerce Store! </h2>
+        
+        <a href="https://Man-Kave.com" target="_blank">www.Man-Kave.com</a>
+        </div>
+    </section>
     <section id="projects" class="parallax parallax3">
-    <div class="projects" id="projects">
-        <p>Projects</p>
-      <div class="SQL">
-        <p>SQL / T-SQL</p>
-      </div>
-      <div class="queries" id="query">
-          <div class="row1">
-            <h3>MySQL Albums</h3>
-          <a href="./SQLqueries/60minSQL.sql" target="_parent"><img src="./images/MySQL60Min.png"></a></div>
-          <div class="row1">
-            <h3>T-SQL: Covid Deaths</h3>
-          <a href="./SQLqueries/SQL Covid Project 1.sql" target="_top"><img src="./images/CovidQueries.png"></a></div>
-          <div class="row1">
-            <h3>T-SQL: Subqueries</h3>
-          <a href="./SQLqueries/VideoGameQueries.sql" target="_top"><img src="./images/VideoGameQueries.png"></a></div>
-          <div class="row1">
-            <h3>T-SQL: Subqueries</h3>
-          <a href="./SQLqueries/Subqueries.sql" target="_top"><img src="./images/Subqueries.png"></a></div>
-      </div>
-      
-      <div class="Tableau" id="Tableau">
-        <div class="row1">
-            <a href="https://public.tableau.com/views/CovidDashboard_16933543014790/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">
-                <h3>Tableau - Covid Dashboard</h3>
-                <img src="./images/TableauDashboard.png" alt="Tableau Dashboard">
-            </a>
-            <a href="https://public.tableau.com/views/VideoGameDashboard_16940106263160/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" target="_blank">
-                <h3>Tableau - Game Dashboard</h3>
-                <img src="./images/TableauVideoGames.png" alt="Tableau Dashboard">
-            </a>
+        <div class="projects" id="projects">
+            <h2>Projects</h2>
+            <div class="SQL">
+                <h2>SQL / T-SQL</h2>
+            </div>
+            
+            <!-- SQL Queries Section -->
+            <div class="queries" id="query">
+                <div class="row1">
+                    <p>MySQL Albums</p>
+                    <a href="./SQLqueries/60minSQL.sql" target="_parent"><img src="./images/MySQL60Min.png"></a>
+                </div>
+                <div class="row1">
+                    <p>T-SQL: Covid Deaths</p>
+                    <a href="./SQLqueries/SQL Covid Project 1.sql" target="_top"><img src="./images/CovidQueries.png"></a>
+                </div>
+                <div class="row1">
+                    <p>T-SQL: Subqueries</p>
+                    <a href="./SQLqueries/VideoGameQueries.sql" target="_top"><img src="./images/VideoGameQueries.png"></a>
+                </div>
+                <div class="row1">
+                    <p>T-SQL: Subqueries</p>
+                    <a href="./SQLqueries/Subqueries.sql" target="_top"><img src="./images/Subqueries.png"></a>
+                </div>
+            </div>
+    
+<!-- Tableau Section -->
+<div class="Tableau" id="Tableau">
+    <h2>Tableau Dashboard</h2> <!-- Move h2 outside the row1 divs and keep it above -->
+    <div class="row1">
+        <a href="https://public.tableau.com/views/CovidDashboard_16933543014790/Dashboard1?:language=en-US&amp;publish=yes&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank">
+            <p>Tableau - Covid Dashboard</p>
+            <img src="./images/TableauDashboard.png" alt="Tableau Dashboard">
+        </a>
+    </div>
+    <div class="row1">
+        <a href="https://public.tableau.com/views/VideoGameDashboard_16940106263160/Dashboard1?:language=en-US&amp;publish=yes&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank">
+            <p>Tableau - Game Dashboard</p>
+            <img src="./images/TableauVideoGames.png" alt="Tableau Dashboard">
+        </a>
+    </div>
+</div>
+
+        </div>
+    </section>
+    
+    <section id="projects-parallax" class="parallax parallax4">
+        <div class="Javascript">
+            <p>Javascript</p>
+        </div>
+        <div class="vidList">
+            <figure id="video_player">
+                <video id="main_video" controls poster="./images/slogo.png">
+                    <source src="" type="video/mp4">
+                    <source src="" type="video/webm">
+                </video>
+                <figcaption>
+                    <div class="figHeight">
+                        <a href="./videos/Main.mp4" onclick="return playVideo(event, './videos/Main.mp4');"><img src="./images/UOGithub.png" alt="Uses seed if variable met and put on timer"></a>
+                        <a href="./videos/Vid2.mp4" onclick="return playVideo(event, './videos/Vid2.mp4');"><img src="./images/seed.png" alt="Uses seed if variable met and put on timer"></a>
+                        <a href="./videos/evade.mp4" onclick="return playVideo(event, './videos/evade.mp4');"><img src="./images/evade.png" alt="Casts evasion and displays timer"></a>
+                        <a href="./videos/mount.mp4" onclick="return playVideo(event, './videos/mount.mp4');"><img src="./images/mounting.png" alt="Call back function & status check for mounting"></a>
+                        <a href="./videos/dart.mp4" onclick="return playVideo(event, './videos/dart.mp4');"><img src="./images/darts.png" alt="Multiple Functions (darts)"></a>
+                        <a href="./videos/looter.mp4" onclick="return playVideo(event, './videos/looter.mp4');"><img src="./images/looter.png" alt="Complicated Loot Script"></a>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+<!-- Python Section -->
+<section id="projects-parallax" class="parallax parallax5">
+    <div class="Python">
+        <h2>Python</h2>
+        <div class="Pythonscripts">
+            <div class="python-row">
+                <a href="./PythonScripts/PythonAntiDisarmer.png" target="_blank">
+                    <img src="./PythonScripts/PythonAntiDisarmer.png" alt="Anti-Disarmer">
+                    <p>Anti-Disarmer</p>
+                </a>
+            </div>
+            <div class="python-row">
+                <a href="./PythonScripts/autoseed.png" target="_blank">
+                    <img src="./PythonScripts/autoseed.png" alt="Auto-Seed">
+                    <p>Auto-Seed</p>
+                </a>
+            </div>
+            <div class="python-row">
+                <a href="./PythonScripts/autostats.png" target="_blank">
+                    <img src="./PythonScripts/autostats.png" alt="Auto-Stats">
+                    <p>Auto-Stats</p>
+                </a>
+            </div>
+            <div class="python-row">
+                <a href="./PythonScripts/pophorse.png" target="_blank">
+                    <img src="./PythonScripts/pophorse.png" alt="Pop-Horse">
+                    <p>Pop-Horse</p>
+                </a>
+            </div>
+            <div class="python-row">
+                <a href="./PythonScripts/trapbox.png" target="_blank">
+                    <img src="./PythonScripts/trapbox.png" alt="Trap-Box">
+                    <p>Trap-Box</p>
+                </a>
+            </div>
+            <div class="python-row">
+                <a href="./PythonScripts/whirlwind.png" target="_blank">
+                    <img src="./PythonScripts/whirlwind.png" alt="Whirlwind">
+                    <p>Whirlwind</p>
+                </a>
+            </div>
+            <div class="python-row">
+                <a href="./PythonScripts/poisonweap.png" target="_blank">
+                    <img src="./PythonScripts/poisonweap.png" alt="Poison Weapon">
+                    <p>Poison Weapon</p>
+                </a>
+            </div>
+            <div class="python-row">
+                <a href="./PythonScripts/nodachidismount.png" target="_blank">
+                    <img src="./PythonScripts/nodachidismount.png" alt="Dismount">
+                    <p>Dismount</p>
+                </a>
+            </div>
         </div>
     </div>
-        </section>
-        <section id="projects-parallax" class="parallax parallax4">
-            <div class="Javascript">
-                <a style="text-decoration: none;"></a>
-                <p>Javascript</p>
+</section>
+
+<!-- Games Section -->
+<section id="games-parallax" class="parallax parallax5">
+    <div class="Gamestitle">
+        <h2>Games Written in JavaScript</h2>
+        <div class="projectsGames">
+            <div class="games-row">
+                <a href="./JavaScript-Tic-Tac-Toe-master/index.html" target="_blank">
+                    <img src="./images/tictactoeposter.png" alt="Play Tic Tac Toe">
+                    <p>Tic-Tac-Toe</p>
+                </a>
             </div>
-            <div class="vidList">
-                <figure id="video_player">
-                    <video id="main_video" controls poster="./images/slogo.png">
-                        <source src="" type="video/mp4">
-                        <source src="" type="video/webm">
-                    </video>
-                    <figcaption>
-                        <div class="figHeight">
-                            <a href="./videos/Main.mp4" onclick="return playVideo(event, './videos/Main.mp4');"><img src="./images/UOGithub.png" alt="Uses seed if variable met and put on timer"></a>
-                            <a href="./videos/Vid2.mp4" onclick="return playVideo(event, './videos/Vid2.mp4');"><img src="./images/seed.png" alt="Uses seed if variable met and put on timer"></a>
-                            <a href="./videos/evade.mp4" onclick="return playVideo(event, './videos/evade.mp4');"><img src="./images/evade.png" alt="Casts evasion and displays timer"></a>
-                            <a href="./videos/mount.mp4" onclick="return playVideo(event, './videos/mount.mp4');"><img src="./images/mounting.png" alt="Call back function & status check for mounting"></a>
-                            <a href="./videos/dart.mp4" onclick="return playVideo(event, './videos/dart.mp4');"><img src="./images/darts.png" title="darts" alt="Multiple Functions (darts)"></a>
-                            <a href="./videos/looter.mp4" onclick="return playVideo(event, './videos/looter.mp4');"><img src="./images/looter.png" alt="Complicated Loot Script"></a>
-                        </div>
-                    </figcaption>
-                </figure>
+            <div class="games-row">
+                <a href="./Chess-Game-main/index.html" target="_blank">
+                    <img src="./images/chessposter.png" alt="Play Chess">
+                    <p>Chess</p>
+                </a>
             </div>
-        </section>
-                  <section id="projects-parallax" class="parallax parallax5">
-                    <div class="Gamestitle">
-                        <p>Games Written in Javascript</p>
-                    </div>
-                    <div class="projectsGames">
-                        <div class="row1">
-                            <a href="./JavaScript-Tic-Tac-Toe-master/index.html" target="_blank">Tic-Tac-Toe<img src="./images/tictactoeposter.png" alt="Play Tic Tac Toe"></a>
-                        </div>
-                        <div class="row1">
-                            <a href="./Chess-Game-main/index.html" target="_blank">Chess<img src="./images/chessposter.png" alt="Play Chess"></a>
-                        </div>
-                    </div></div>
-                </section>
-                <section id="projects-parallax" class="parallax parallax5">
-                    <div class="Python">
-                        <p>Python</p>
-                        <div class="Pythonscripts">
-                            <div class="row1">
-                                <a href="./PythonScripts/PythonAntiDisarmer.png" target="_parent">
-                                    <img src="./PythonScripts/PythonAntiDisarmer.png" alt="Anti-Disarmer">
-                                </a>
-                            </div>
-                            <div class="row1">
-                                <a href="./PythonScripts/autoseed.png" target="_top">
-                                    <img src="./PythonScripts/autoseed.png" alt="Auto-Seed">
-                                </a>
-                            </div>
-                            <div class="row1">
-                                <a href="./PythonScripts/autostats.png" target="_top">
-                                    <img src="./PythonScripts/autostats.png" alt="Auto-Stats">
-                                </a>
-                            </div>
-                            <div class="row1">
-                                <a href="./PythonScripts/pophorse.png" target="_top">
-                                    <img src="./PythonScripts/pophorse.png" alt="Pop-Horse">
-                                </a>
-                            </div>
-                            <div class="row1">
-                                <a href="./PythonScripts/trapbox.png" target="_top">
-                                    <img src="./PythonScripts/trapbox.png" alt="Trap-Box">
-                                </a>
-                            </div>
-                            <div class="row1">
-                                <a href="./PythonScripts/whirlwind.png" target="_top">
-                                    <img src="./PythonScripts/whirlwind.png" alt="Whirlwind">
-                                </a>
-                            </div>
-                            <div class="row1">
-                                <a href="./PythonScripts/poisonweap.png" target="_top">
-                                    <img src="./PythonScripts/poisonweap.png" alt="Poison Weapon">
-                                </a>
-                            </div>
-                            <div class="row1">
-                                <a href="./PythonScripts/nodachidismount.png" target="_top">
-                                    <img src="./PythonScripts/nodachidismount.png" alt="Dismount">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        </div>
+    </div>
+</section>
+
                 
-                
-    <section id="projects-parallax" class="parallax parallax5"></section>
+                         
 
     <section id="contact" class="parallax parallax4">
         <div class="content2">
             <h2 class="section-title">Contact</h2>
             <p class="emailText">
-                Contact me at: <a href="mailto:nickknight488@gmail.com">nickknight488@gmail.com.com</a>
+                Contact me at: <a href="mailto:nickknight488@gmail.com">nickknight488@gmail.com</a>
             </p>
             <p>Visit My Social Media</p>
         
         <div class="icons">
-            <a href="https://github.com/Nicholasjknight/Portfolio-Projects.git" target="_blank"><img src="./images/GithubIcon.png" title="GitHub Repositories"></a>
-            <a href="https://www.facebook.com/profile.php?id=100013964955614" target="_blank"><img src="./images/facebook-icon.png" title="Facebook"></a>
-            <a href="https://www.youtube.com/channel/UChI-xkk3bZTl_ZH4UcY1cMg" target="_blank"><img src="./images/youtube-icon.png" title="You Tube"></a>
-            <a href="https://discord.gg/mdMEVVmY" target="_blank"><img src="./images/discord-icon.png" title="Discord"></a>
-            <a href="https://www.twitch.tv/twitched369" target="_blank"><img src="./images/twitch-icon.png" title="Twitch"></a>
-            <a href="https://www.linkedin.com/in/nicholas-knight-23010b23a/" target="_blank"><img src="./images/linkedin-icon.png" title="Linked-in"></a>
+            <a href="https://github.com/Nicholasjknight/Portfolio-Projects.git" target="_blank"><img src="./images/GithubIcon.png" title="GitHub Repositories" alt="GitHub"></a>
+            <a href="https://www.facebook.com/profile.php?id=100013964955614" target="_blank"><img src="./images/facebook-icon.png" title="Facebook" alt="Facebook"></a>
+            <a href="https://www.youtube.com/channel/UChI-xkk3bZTl_ZH4UcY1cMg" target="_blank"><img src="./images/youtube-icon.png" title="You Tube" alt="YouTube"></a>
+            <a href="https://discord.gg/mdMEVVmY" target="_blank"><img src="./images/discord-icon.png" title="Discord" alt="Discord"></a>
+            <a href="https://www.twitch.tv/twitched369" target="_blank"><img src="./images/twitch-icon.png" title="Twitch" alt="Twitch"></a>
+            <a href="https://www.linkedin.com/in/nicholas-knight-23010b23a/" target="_blank"><img src="./images/linkedin-icon.png" title="Linked-in" alt="Linked-In"></a>
             </div>
               </ul>  
         </div>
     </section>
 
-    <section id="contact-parallax" class="parallax parallax6">
-        <div class="mankave">
-        <h1>Check out my E-Commerce Store! </h1>
-        
-        <a href="https://Man-Kave.com" target="_blank">www.Man-Kave.com</a>
-        </div>
-    </section>
 
     <footer>
         <p>&copy; 2024 Nicholas Knight. All rights reserved.</p>

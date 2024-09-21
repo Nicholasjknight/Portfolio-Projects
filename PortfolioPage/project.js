@@ -1,66 +1,111 @@
-// Search form submit event listener
-document.getElementById('searchForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-
-    const query = document.getElementById('searchInput').value.toLowerCase(); // Get the search query and convert to lowercase
-    const bodyText = document.body.innerText.toLowerCase(); // Get the text content of the entire page
-
-    // Clear previous results
+// Search form input event listener (real-time predictive search)
+document.getElementById('searchInput').addEventListener('input', function(event) {
+    const query = event.target.value.toLowerCase(); // Get the search query and convert to lowercase
     const searchResultsContainer = document.getElementById('searchResults');
     searchResultsContainer.innerHTML = ''; // Clear previous results
 
     if (query) {
         // Initialize variables for storing results
         let searchResultCount = 0;
-        let resultIndices = [];
+        const uniqueResults = new Set(); // Set to ensure no duplicates
 
-        // Use regex to find all occurrences of the search query
-        const regex = new RegExp(query, 'gi');
-        const matches = [...document.body.innerText.matchAll(regex)];
+        // Select only <h1>, <h2>, and <p> elements for searching
+        const elementsToSearch = document.querySelectorAll('h1, h2, p');
 
-        if (matches.length > 0) {
-            searchResultCount = matches.length;
+        elementsToSearch.forEach((element, elementIndex) => {
+            const elementText = element.innerText.toLowerCase(); // Get the text content of the element
+            const regex = new RegExp(`\\b(${query}\\w*)`, 'gi'); // Match words starting with the query
 
-            // Loop through each match and highlight
-            matches.forEach((match, index) => {
-                const matchText = match[0];
-                const resultIndex = bodyText.indexOf(matchText.toLowerCase(), resultIndices.length > 0 ? resultIndices[resultIndices.length - 1] + 1 : 0);
-                resultIndices.push(resultIndex);
+            const matches = [...elementText.matchAll(regex)]; // Find all matches in the element
 
-                // Add each result as a clickable link in the searchResults div
-                const resultItem = document.createElement('div');
-                resultItem.className = 'result-item';
-                resultItem.innerHTML = `<a href="#result${index}" onclick="scrollToResult(${index});">${index + 1}: ${matchText}</a>`;
-                searchResultsContainer.appendChild(resultItem);
+            if (matches.length > 0) {
+                matches.forEach((match) => {
+                    const matchText = match[0];
+                    const matchIndex = match.index;
 
-                // Wrap the result with a span that will be scrolled to
-                document.body.innerHTML = document.body.innerHTML.replace(matchText, `<span id="result${index}" class="highlighted">${matchText}</span>`);
-            });
+                    // Get the context with a 60 character limit after the match
+                    const context = getContextWithLimit(elementText, matchIndex, matchText, 60);
 
-            // Display total results
+                    // If the context is unique and valid, add it to the result
+                    if (!uniqueResults.has(context) && context) {
+                        uniqueResults.add(context);
+
+                        // Create result item and add it to the dropdown
+                        const resultItem = document.createElement('div');
+                        resultItem.className = 'result-item';
+                        resultItem.innerHTML = `<a href="#element${elementIndex}" onclick="scrollToElement(${elementIndex});">${context}</a>`;
+
+                        // Append the result item to the container
+                        searchResultsContainer.appendChild(resultItem);
+
+                        searchResultCount++;
+                    }
+                });
+            }
+        });
+
+        if (searchResultCount > 0) {
+            // Total results at the bottom of the dropdown
             const totalResults = document.createElement('div');
             totalResults.className = 'total-results';
             totalResults.innerText = `Total results: ${searchResultCount}`;
             searchResultsContainer.appendChild(totalResults);
 
-            // Show dropdown results with opacity
+            // close button to the top-right
+            const closeButton = document.createElement('button');
+            closeButton.className = 'close-results';
+            closeButton.innerHTML = 'X';
+            closeButton.onclick = () => hideSearchResults();
+            searchResultsContainer.appendChild(closeButton);
+
+            // Show dropdown results
             searchResultsContainer.style.display = 'block';
         } else {
-            // No results found
-            alert('No results found.');
-            searchResultsContainer.style.display = 'none'; // Hide the results if no match is found
+            searchResultsContainer.style.display = 'none';
         }
+    } else {
+        // Hide dropdown if the search is cleared
+        searchResultsContainer.style.display = 'none';
     }
 });
 
-// Function to scroll to a specific result by its index
-function scrollToResult(index) {
-    const resultElement = document.getElementById(`result${index}`);
-    if (resultElement) {
-        resultElement.scrollIntoView({ behavior: 'smooth' });
-        resultElement.style.backgroundColor = "yellow"; // Highlight the result
-    }
+// Function to get context around the search match with a character limit
+function getContextWithLimit(text, matchIndex, matchText, charLimit) {
+    const snippet = text.slice(matchIndex); // Get the text after the match
+    const contextEndIndex = snippet.indexOf(' ', charLimit); // Find where to cut off the context
+
+    // Slice the context to the proper length and append ellipsis if necessary
+    const context = (contextEndIndex !== -1) ? snippet.slice(0, contextEndIndex) : snippet.slice(0, charLimit);
+
+    // Return the context with ellipsis if it's longer than charLimit
+    return (context.length >= charLimit) ? context.slice(0, charLimit) + '...' : context;
 }
+
+// Function to scroll to a specific element by its index
+function scrollToElement(elementIndex) {
+    const element = document.querySelectorAll('h1, h2, p')[elementIndex]; // Find the element by index
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' }); // Scroll to the element
+    }
+    hideSearchResults(); // Hide the search results when clicking
+}
+
+// Function to hide the search results dropdown
+function hideSearchResults() {
+    const searchResultsContainer = document.getElementById('searchResults');
+    searchResultsContainer.style.display = 'none'; // Hide the results
+}
+
+// Function to show the search results (called when user starts typing)
+function showSearchResults() {
+    const searchResultsContainer = document.getElementById('searchResults');
+    searchResultsContainer.style.display = 'block'; // Show the results
+}
+
+// Show the search results again when typing
+document.getElementById('searchInput').addEventListener('focus', function() {
+    showSearchResults();
+});
 
 function scrollToTop() {
     window.scrollTo(0, 0);
@@ -92,8 +137,43 @@ function playVideo(event, videoSrc) {
     videoElement.src = videoSrc;
     videoElement.play();
   }
-// Function to toggle hamburger menu on small screens
+// Toggle hamburger menu for smaller screens
 document.querySelector(".hamburger-menu").addEventListener("click", function () {
     const navLinks = document.querySelector(".nav-links");
-    navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
-  });
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const hamburgerIcon = hamburgerMenu.querySelector(".hamburger-icon");
+    const closeIcon = hamburgerMenu.querySelector(".close-icon");
+
+    // Toggle navigation visibility
+    if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none"; // Hide the nav links
+        hamburgerIcon.style.display = "block"; // Show hamburger icon
+        closeIcon.style.display = "none"; // Hide close icon
+    } else {
+        navLinks.style.display = "flex"; // Show the nav links
+        hamburgerIcon.style.display = "none"; // Hide hamburger icon
+        closeIcon.style.display = "block"; // Show close icon
+    }
+});
+
+
+//IOS & Safari Checker
+ function isIOSorSafari() {
+        var userAgent = window.navigator.userAgent;
+
+        // Check for iOS
+        var iOS = !!userAgent.match(/iPad|iPhone|iPod/i);
+
+        // Check for Safari
+        var safari = /^((?!chrome|android).)*safari/i.test(userAgent);
+
+        return iOS || safari;
+    }
+
+    // Apply background scroll for iOS and Safari
+    if (isIOSorSafari()) {
+        document.querySelectorAll('.parallax').forEach(function(parallaxSection) {
+            parallaxSection.style.backgroundAttachment = 'scroll';
+        });
+    }
+
